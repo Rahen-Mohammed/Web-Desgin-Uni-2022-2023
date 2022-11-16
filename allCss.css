@@ -1,0 +1,383 @@
+:root {
+    --rahne: #23a580;
+    --leftright: 250px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* header */
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.507);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--leftright);
+    box-shadow: 0 1px 8px rgb(82, 146, 73);
+}
+
+header .left img {
+    height: 40px;
+    width: 40px;
+    margin-right: 0.5rem;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav {
+    display: flex;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgba(245, 245, 245, 0.788);
+    left: 0;
+    top: calc(100% + 3px);
+}
+
+.dropdown li {
+    width: 250px;
+}
+
+#dropdown-parent {
+    position: relative;
+}
+
+#dropdown-parent:hover .dropdown {
+    display: block;
+}
+
+.nav li {
+    padding: 1rem;
+    cursor: pointer;
+    color: var(--rahne);
+}
+
+.nav li a {
+    color: var(--rahne);
+}
+
+.nav > li:nth-child(1),
+.nav li:hover {
+    border-bottom: 3px solid var(--rahne);
+}
+
+/*main*/
+
+a {
+    text-decoration: none;
+    color: var(--rahne);
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+main {
+    min-height: calc(100vh - 53px - 167px);
+    padding: 2rem var(--leftright);
+}
+
+main h2 {
+    color: var(--rahne);
+}
+
+.img-slider {
+    display: flex;
+    overflow: auto;
+}
+
+.home .btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.home .btn-group button {
+    cursor: pointer;
+    padding: 2rem 0;
+    display: inline-block;
+    width: 100%;
+    background-color: transparent;
+    color: var(--rahne);
+    border: 1px solid var(--rahne);
+    box-shadow: 4px 4px 4px #83b8a9;
+    transition: all 0.5s;
+    margin-right: 1rem;
+}
+
+.home .btn-group button:hover {
+    background-image: linear-gradient(to right, var(--rahne), #23a580);
+    color: white;
+    border: 1px solid #0c654c;
+}
+
+.home .btn-group button:active {
+    transform: translateX(4px) translateY(4px);
+    box-shadow: none;
+}
+
+.home .btn-group button:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.home .btn-group button:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.home .articles {
+    margin-top: 1rem;
+}
+
+.home .articles > h2 {
+    text-align: center;
+}
+
+.home .articles article {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.home .articles p:last-child {
+    margin-top: 1rem;
+}
+
+.first-child-mr-1 {
+    margin-right: 1rem;
+}
+
+.img-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.img-wrapper img {
+    height: 100%;
+    width: 100%;
+}
+
+.blog article p {
+    margin-bottom: 1rem;
+}
+
+.blog article img {
+    float: left;
+    height: 175px;
+    width: 40%;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.blog .article-2 img {
+    float: right;
+    margin: 0;
+    margin-left: 1rem;
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-items: center;
+}
+
+.schedule h2 {
+    align-self: flex-start;
+    margin-bottom: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 5px;
+}
+
+thead {
+    background-color: rgb(230, 230, 230);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    display: block;
+}
+
+form input {
+    padding: 0.5rem;
+    border-bottom-right-radius: 10px;
+    outline-offset: 2px;
+    font-size: 1rem;
+    border: 1px solid var(--rahne);
+    margin-top: 0.2rem;
+}
+
+.signin form input {
+    min-width: 30rem;
+}
+
+input:focus {
+    outline: 2px solid rgb(161, 188, 82);
+}
+
+form div {
+    margin-top: 1rem;
+}
+
+.submit {
+    min-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit button {
+    padding: 0.5rem 1rem;
+    border-bottom-right-radius: 10px;
+    background-color: var(--rahne);
+    color: white;
+    border: 1px solid var(--rahne);
+    cursor: pointer;
+    box-shadow: 4px 4px 4px #56b499;
+    transition: 0.5s all;
+}
+
+.submit button:active {
+    transform: translateX(4px) translateY(4px);
+    box-shadow: 4px 4px 4px #56b499 inset;
+}
+
+.signup form > div {
+    width: 100%;
+}
+
+.signup form > div input {
+    width: 100%;
+}
+
+.signup input[type="color"] {
+    height: 40px;
+    padding: 0;
+}
+
+.signup fieldset {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--rahne);
+    border-bottom-right-radius: 10px;
+}
+
+.signup fieldset label {
+    display: inline;
+}
+
+.signup legend {
+    border: 1px solid var(--rahne);
+    border-bottom-right-radius: 10px;
+    padding: 0.5rem;
+    box-shadow: 2px 2px 2px #83b8a9;
+    font-size: 1rem;
+}
+
+.signup select {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-bottom-right-radius: 10px;
+    border: 1px solid var(--rahne);
+    overflow: auto;
+}
+
+.signup textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-bottom-right-radius: 10px;
+    border: 1px solid var(--rahne);
+    height: 80px;
+}
+
+.signup .btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signup .btn-group input {
+    width: fit-content;
+    padding: 0.5rem;
+    color: white;
+    background-color: rgb(168, 73, 73);
+    border: 1px solid red;
+    /* box-shadow: 2px 2px 2px rgb(172, 99, 99); */
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.signup .btn-group input:hover {
+    box-shadow: 0 0 4px 8px rgb(172, 99, 99);
+}
+
+.signup .btn-group input:focus {
+    outline: none;
+}
+
+.signup .btn-group button {
+    padding: 0.5rem;
+    border-bottom-right-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #27725d;
+    background-color: var(--rahne);
+    box-shadow: 2px 2px 2px #83b8a9;
+    transition: 0.5s all;
+}
+
+.signup .btn-group button:active {
+    transform: translateX(2px) translateY(2px);
+    box-shadow: none;
+    box-shadow: 2px 2px 2px #83b8a9 inset;
+}
+
+/* footer */
+footer {
+    clear: left;
+    margin-top: 1rem;
+    color: white;
+    padding: 2rem var(--leftright);
+    background-color: var(--rahne);
+    display: flex;
+    justify-content: space-between;
+    border-top: 0.5rem solid #057659;
+}
+
+footer a {
+    color: white;
+}
