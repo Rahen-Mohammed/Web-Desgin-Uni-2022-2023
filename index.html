@@ -17,7 +17,7 @@
                 <h1>Rahen Mohammed</h1>
             </div>
             <ul class="nav">
-                <li><a href="./index.html">Home</a></li>
+                <li selected><a href="./index.html">Home</a></li>
                 <li><a href="./blog.html">Blog</a></li>
                 <li><a href="./schedule.html">Schedule</a></li>
                 <li id="dropdown-parent">
@@ -33,6 +33,16 @@
             </ul>
         </header>
         <main class="home">
+            <div class="alert">
+                <div class="top-alert">
+                    <h2>This stripped warning using repeating-linear-gradient()</h2>
+                    <button class="x-mark">&#10006;</button>
+                </div>
+                <p>
+                    Essential cookies are enabled by default to give you the best possible site
+                    experience. For details on the other cookies please <a href="#">read more</a>
+                </p>
+            </div>
             <section class="img-slider">
                 <div>
                     <img
@@ -132,5 +142,12 @@
                 <p>Email: example@domain.com</p>
             </section>
         </footer>
+        <script>
+            const topAlert = document.querySelector(".alert");
+            const closeBtn = document.querySelector(".x-mark");
+            closeBtn.addEventListener("click", () => {
+                topAlert.remove();
+            });
+        </script>
     </body>
 </html>

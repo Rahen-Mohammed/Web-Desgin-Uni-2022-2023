@@ -1,6 +1,6 @@
 :root {
     --rahne: #23a580;
-    --leftright: 250px;
+    --leftright: 200px;
 }
 
 * {
@@ -72,7 +72,7 @@ ul {
     color: var(--rahne);
 }
 
-.nav > li:nth-child(1),
+.nav li[selected=""],
 .nav li:hover {
     border-bottom: 3px solid var(--rahne);
 }
@@ -95,6 +95,36 @@ main {
 
 main h2 {
     color: var(--rahne);
+}
+
+.home .alert {
+    border: 1px solid rgb(230, 230, 230);
+    margin-bottom: 1rem;
+}
+
+.home .alert .top-alert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-image: repeating-linear-gradient(45deg, var(--rahne) 0 20px, #13513f 20px 40px);
+}
+
+.home .alert .top-alert h2 {
+    color: white;
+}
+
+.home .alert .top-alert .x-mark {
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+    padding: 0.2rem;
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+.home .alert p {
+    padding: 1rem;
 }
 
 .img-slider {
@@ -143,7 +173,7 @@ main h2 {
 }
 
 .home .articles {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .home .articles > h2 {
@@ -366,9 +396,124 @@ form div {
     box-shadow: 2px 2px 2px #83b8a9 inset;
 }
 
+.flex-home {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem var(--leftright);
+}
+
+.flex-home main {
+    padding: 0;
+    width: 72%;
+}
+
+.flex-home main img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.flex-home main article {
+    margin-top: 1.5rem;
+}
+
+.flex-home main article p {
+    margin-bottom: 1rem;
+}
+
+.flex-home main article h2 {
+    margin-bottom: 0.5rem;
+}
+
+.flex-home aside {
+    width: 27%;
+    background-color: rgba(220, 220, 220, 0.729);
+    border-top: 5px solid var(--rahne);
+    padding: 0.5rem;
+}
+
+.flex-home aside h2 {
+    color: var(--rahne);
+}
+
+aside h2 {
+    margin-bottom: 1rem;
+}
+
+aside li {
+    margin-bottom: 0.7rem;
+}
+
+aside li[selected=""] {
+    font-weight: bold;
+}
+
+.grid-home {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 1rem;
+}
+
+.grid-home > h2 {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+}
+
+.grid-home article img {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.grid-home article p {
+    margin-bottom: 0.5rem;
+}
+
+.float-home {
+    padding: 2rem var(--leftright);
+}
+
+.float-home main {
+    padding: 0;
+    padding-bottom: 2rem;
+    width: 72%;
+    float: left;
+}
+
+.flex-home main img,
+.float-home main img {
+    width: 100%;
+    margin-bottom: 1rem;
+    height: 400px;
+}
+
+.float-home main > h2 {
+    margin-bottom: 1rem;
+}
+
+.float-home main article h2 {
+    margin-bottom: 0.5rem;
+}
+
+main img {
+    box-shadow: 4px 4px 4px gray;
+    object-fit: cover;
+}
+
+.float-home aside {
+    width: 27%;
+    background-color: rgba(220, 220, 220, 0.726);
+    padding: 0.5rem;
+    border-top: 5px solid var(--rahne);
+    float: right;
+}
+
+.float-home main article p {
+    margin-bottom: 0.5rem;
+}
+
 /* footer */
 footer {
-    clear: left;
+    clear: both;
     margin-top: 1rem;
     color: white;
     padding: 2rem var(--leftright);
