@@ -1,6 +1,6 @@
 :root {
     --rahne: #23a580;
-    --leftright: 200px;
+    --leftright: 10rem;
 }
 
 * {
@@ -22,6 +22,10 @@ header {
     align-items: center;
     padding: 0 var(--leftright);
     box-shadow: 0 1px 8px rgb(82, 146, 73);
+}
+
+header h1 {
+    color: darkgreen;
 }
 
 header .left img {
@@ -59,8 +63,24 @@ ul {
     position: relative;
 }
 
+#dropdown-parent::after {
+    content: " ";
+    position: absolute;
+    border: 10px solid transparent;
+    border-top: 10px solid var(--rahne);
+    top: calc(50% - 10px);
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 0.2s all;
+}
+
 #dropdown-parent:hover .dropdown {
     display: block;
+}
+
+#dropdown-parent:hover::after {
+    top: calc(50% - 4px);
+    transform: rotate(0);
 }
 
 .nav li {
@@ -580,4 +600,10 @@ footer {
 
 footer a {
     color: white;
+}
+
+@media (max-width: 1200px) {
+    header {
+        padding: 0 5rem;
+    }
 }
