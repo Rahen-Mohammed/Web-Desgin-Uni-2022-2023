@@ -12,6 +12,7 @@
 
 /* header */
 header {
+    z-index: 1;
     position: sticky;
     top: 0;
     left: 0;
@@ -127,9 +128,59 @@ main h2 {
     padding: 1rem;
 }
 
-.img-slider {
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.slider {
     display: flex;
+    aspect-ratio: 16/9;
     overflow: auto;
+}
+
+.slider img {
+    flex: 1 0 100%;
+}
+
+.bottom-nav {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    column-gap: 10px;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bottom-nav a {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.507);
+}
+
+.slide-container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.507);
+}
+
+.prev {
+    left: 0;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.next {
+    right: 0;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
 }
 
 .home .btn-group {
@@ -149,6 +200,10 @@ main h2 {
     box-shadow: 4px 4px 4px #83b8a9;
     transition: all 0.5s;
     margin-right: 1rem;
+}
+
+.home .btn-group button:last-child {
+    margin-right: 0;
 }
 
 .home .btn-group button:hover {
